@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人简介</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* 主容器样式 */
+       .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* 个人信息部分样式 */
+       .personal-info {
+            flex: 1 1 300px;
+            margin-right: 20px;
+        }
+
+       .personal-info img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* 内容部分样式 */
+       .content {
+            flex: 2 1 600px;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* 联系方式部分样式 */
+       .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+            margin-right: 15px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+       .contact-info a i {
+            margin-right: 5px;
+        }
+
+       .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+           .container {
+                flex-direction: column;
+            }
+
+           .personal-info {
+                margin-right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <h1>张博炎的个人简介</h1>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">技能</a></li>
+            <li><a href="#">联系我</a></li>
+        </ul>
+    </nav>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 个人信息 -->
+        <div class="personal-info">
+            <img src="C:\Users\张博炎\Desktop\微信图片_20250226134252.jpg" alt="张博炎的头像">
+            <h2>张博炎</h2>
+            <p>20 岁，男，来自河南省商丘市，华北水利水电大学 2023 级软件工程专业，智川书院</p>
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <p>大家好，我是张博炎，今年 20 岁，男，家乡是河南省商丘市。我就读于华北水利水电大学 2023 级软件工程专业，智川书院。我专注于构建用户友好的 Web 应用程序，对前端开发充满热情，不断探索新的技术和方法来提升用户体验。</p>
+
+            <h2>技能</h2>
+            <ul>
+                <li><i class="fa-brands fa-html5"></i> 前端开发：HTML, CSS, JavaScript</li>
+                <li><i class="fa-brands fa-git"></i> 版本控制：Git, GitHub</li>
+                <li><i class="fa-solid fa-code"></i> 工具：VS Code, IDEA</li>
+            </ul>
+
+            <h2>联系方式</h2>
+            <div class="contact-info">
+                <p><a href="mailto:3352971081@qq.com"><i class="fa-solid fa-envelope"></i> 邮箱：3352971081@qq.com</a></p>
+                <p><a href="https://github.com/By082" target="_blank"><i class="fa-brands fa-github"></i> GitHub: github.com/By082</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 这里可以添加更多 JavaScript 交互逻辑
+        // 例如导航栏点击事件等
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                // 可以在这里添加滚动到对应部分的逻辑
+                console.log(`Clicked on ${this.textContent}`);
+            });
+        });
+    </script>
+</body>
+
+</html>
